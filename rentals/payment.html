@@ -1,1 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental Application | Apply & Pay</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
+<header>
+    <a href="index.html" class="logo">Hogar Dulce Rentals</a>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="payment.html" class="btn-apply-nav">Apply & Pay</a>
+    </nav>
+</header>
+
+<section class="bg-light">
+    <h1 style="text-align:center; margin-bottom:40px;">Tenant Application</h1>
+    <form id="appForm">
+        <h3>1. Applicant Details</h3><br>
+        <div class="grid" style="margin-top:0;">
+            <div class="form-group"><label for="fName">Full Name</label><input type="text" id="fName" required></div>
+            <div class="form-group"><label for="bDate">Date of Birth</label><input type="date" id="bDate" required></div>
+            <div class="form-group"><label for="uPhone">Phone</label><input type="tel" id="uPhone" required></div>
+            <div class="form-group"><label for="uEmail">Email</label><input type="email" id="uEmail" required></div>
+        </div>
+
+        <div class="form-group">
+            <label for="ssn">Social Security Number</label>
+            <input type="password" id="ssn" placeholder="XXX-XX-XXXX" autocomplete="off" required>
+        </div>
+
+        <div class="form-group">
+            <label for="stateList">Desired State for Rental</label>
+            <select id="stateList" required>
+                <option value="">Choose your state...</option>
+            </select>
+        </div>
+
+        <hr style="margin:2rem 0;"><br>
+        <h3>2. Application Fee ($50.00)</h3><br>
+        <div class="form-group">
+            <label for="cName">Cardholder Name</label>
+            <input type="text" id="cName" required>
+        </div>
+        <div class="form-group">
+            <label for="cNum">Card Number</label>
+            <input type="text" id="cNum" placeholder="1234 5678 1234 5678" autocomplete="off" required>
+        </div>
+        <div class="grid" style="margin-top:0;">
+            <div class="form-group"><label for="cExp">Expiration</label><input type="text" id="cExp" placeholder="MM/YY" required></div>
+            <div class="form-group"><label for="cCVV">CVV</label><input type="password" id="cCVV" maxlength="3" required></div>
+        </div>
+
+        <button type="submit" style="width:100%; font-size:1.2rem;">Complete Application</button>
+    </form>
+</section>
+
+<script>
+    const statesArr = ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"];
+    const stateSelect = document.getElementById('stateList');
+    statesArr.forEach(s => {
+        let o = document.createElement('option');
+        o.value = s; o.textContent = s;
+        stateSelect.appendChild(o);
+    });
+
+    document.getElementById('appForm').onsubmit = function(e) {
+        e.preventDefault();
+        alert('Payment and Application Successful! We will process your background check shortly.');
+        this.reset();
+    };
+</script>
+
+</body>
+</html>
