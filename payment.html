@@ -3,8 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rental Application | Apply & Pay</title>
+    <title>Apply & Pay | Hogar Dulce Rentals</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Specific styles for the application page */
+        .app-banner {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 60px 10%;
+            text-align: center;
+        }
+        .section-title {
+            background: var(--primary-blue);
+            color: white;
+            padding: 10px 15px;
+            margin: 30px 0 20px 0;
+            border-radius: 4px;
+            font-size: 1.2rem;
+        }
+        .fee-highlight {
+            background: #fff3cd;
+            border: 1px solid #ffeeba;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: bold;
+            color: #856404;
+        }
+        .img-gallery {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .img-gallery img {
+            width: 33.3%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+    </style>
 </head>
 <body>
 
@@ -18,60 +58,100 @@
     </nav>
 </header>
 
+<div class="app-banner">
+    <h1>Rental Application Portal</h1>
+    <p>Secure your future home with our professional screening process.</p>
+</div>
+
 <section class="bg-light">
-    <h1 style="text-align:center; margin-bottom:40px;">Tenant Application</h1>
-    <form id="appForm">
-        <h3>1. Applicant Details</h3><br>
+    <div class="fee-highlight">
+        Standard Application & Background Check Fee: $150.00 (Non-Refundable)
+    </div>
+
+    <div class="img-gallery">
+        <img src="https://images.unsplash.com" alt="Modern Kitchen">
+        <img src="https://images.unsplash.com" alt="Luxury Exterior">
+        <img src="https://images.unsplash.com" alt="Master Bedroom">
+    </div>
+
+    <form id="fullAppForm">
+        <!-- 1. Personal Information -->
+        <div class="section-title">1. Personal Information</div>
         <div class="grid" style="margin-top:0;">
-            <div class="form-group"><label for="fName">Full Name</label><input type="text" id="fName" required></div>
-            <div class="form-group"><label for="bDate">Date of Birth</label><input type="date" id="bDate" required></div>
-            <div class="form-group"><label for="uPhone">Phone</label><input type="tel" id="uPhone" required></div>
-            <div class="form-group"><label for="uEmail">Email</label><input type="email" id="uEmail" required></div>
-        </div>
-
-        <div class="form-group">
-            <label for="ssn">Social Security Number</label>
-            <input type="password" id="ssn" placeholder="XXX-XX-XXXX" autocomplete="off" required>
-        </div>
-
-        <div class="form-group">
-            <label for="stateList">Desired State for Rental</label>
-            <select id="stateList" required>
-                <option value="">Choose your state...</option>
-            </select>
-        </div>
-
-        <hr style="margin:2rem 0;"><br>
-        <h3>2. Application Fee ($50.00)</h3><br>
-        <div class="form-group">
-            <label for="cName">Cardholder Name</label>
-            <input type="text" id="cName" required>
-        </div>
-        <div class="form-group">
-            <label for="cNum">Card Number</label>
-            <input type="text" id="cNum" placeholder="1234 5678 1234 5678" autocomplete="off" required>
+            <div class="form-group"><label>Full Legal Name</label><input type="text" required></div>
+            <div class="form-group"><label>Date of Birth</label><input type="date" required></div>
+            <div class="form-group"><label>SSN or ITIN</label><input type="password" placeholder="XXX-XX-XXXX" required></div>
+            <div class="form-group"><label>Driver's License / State ID #</label><input type="text" required></div>
         </div>
         <div class="grid" style="margin-top:0;">
-            <div class="form-group"><label for="cExp">Expiration</label><input type="text" id="cExp" placeholder="MM/YY" required></div>
-            <div class="form-group"><label for="cCVV">CVV</label><input type="password" id="cCVV" maxlength="3" required></div>
+            <div class="form-group"><label>Phone Number</label><input type="tel" required></div>
+            <div class="form-group"><label>Email Address</label><input type="email" required></div>
+        </div>
+        <div class="form-group"><label>Current Residential Address</label><input type="text" required></div>
+
+        <!-- 2. Rental History -->
+        <div class="section-title">2. Rental History</div>
+        <div class="form-group"><label>Current Landlord Name & Phone</label><input type="text" required></div>
+        <div class="form-group"><label>Previous Addresses (Last 3-5 Years)</label><textarea rows="3" required></textarea></div>
+        <div class="form-group"><label>Reason for Moving</label><input type="text" required></div>
+
+        <!-- 3. Employment & 4. Financial -->
+        <div class="section-title">3 & 4. Employment & Financials</div>
+        <div class="grid" style="margin-top:0;">
+            <div class="form-group"><label>Current Employer</label><input type="text" required></div>
+            <div class="form-group"><label>Job Title</label><input type="text" required></div>
+            <div class="form-group"><label>Monthly Gross Income ($)</label><input type="number" placeholder="e.g. 5000" required></div>
+            <div class="form-group"><label>Length of Employment</label><input type="text" required></div>
+        </div>
+        <div class="form-group"><label>Supervisor/HR Contact Info</label><input type="text" required></div>
+
+        <!-- 5. Background Check Authorization -->
+        <div class="section-title">5. Background & Credit Authorization</div>
+        <div class="form-group" style="display:flex; align-items:start; gap:10px;">
+            <input type="checkbox" style="width:20px; margin-top:5px;" required>
+            <label style="font-weight:normal;">I hereby authorize Hogar Dulce Rentals to conduct a credit check, criminal background check, and eviction history check as part of this $150 application process.</label>
         </div>
 
-        <button type="submit" style="width:100%; font-size:1.2rem;">Complete Application</button>
+        <!-- 6. Occupants & 7. Pets -->
+        <div class="section-title">6 & 7. Occupants & Pets</div>
+        <div class="form-group"><label>Names & Ages of All Other Occupants</label><textarea rows="2"></textarea></div>
+        <div class="grid" style="margin-top:0;">
+            <div class="form-group"><label>Pet Type/Breed</label><input type="text"></div>
+            <div class="form-group"><label>Pet Weight</label><input type="text"></div>
+        </div>
+
+        <!-- 8. Vehicles & 9. Emergency Contact -->
+        <div class="section-title">8 & 9. Vehicle & Emergency Contact</div>
+        <div class="grid" style="margin-top:0;">
+            <div class="form-group"><label>Vehicle Make/Model/Plate</label><input type="text"></div>
+            <div class="form-group"><label>Emergency Contact Name & Phone</label><input type="text" required></div>
+        </div>
+
+        <!-- 10. References -->
+        <div class="section-title">10. References</div>
+        <div class="form-group"><label>Professional/Personal References (Names & Numbers)</label><textarea rows="3"></textarea></div>
+
+        <!-- PAYMENT SECTION -->
+        <div class="section-title" style="background:#28a745;">Final Step: Pay Application Fee ($150.00)</div>
+        <div class="form-group"><label>Cardholder Name</label><input type="text" required></div>
+        <div class="form-group"><label>Credit Card Number</label><input type="text" placeholder="0000 0000 0000 0000" required></div>
+        <div class="grid" style="margin-top:0;">
+            <div class="form-group"><label>Expiration (MM/YY)</label><input type="text" required></div>
+            <div class="form-group"><label>CVV</label><input type="password" maxlength="4" required></div>
+        </div>
+
+        <button type="submit" style="width:100%; font-size:1.3rem; background:#28a745;">Submit Application & Pay $150</button>
     </form>
 </section>
 
-<script>
-    const statesArr = ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"];
-    const stateSelect = document.getElementById('stateList');
-    statesArr.forEach(s => {
-        let o = document.createElement('option');
-        o.value = s; o.textContent = s;
-        stateSelect.appendChild(o);
-    });
+<footer>
+    <p>&copy; 2024 Hogar Dulce Rentals. All Rights Reserved.</p>
+</footer>
 
-    document.getElementById('appForm').onsubmit = function(e) {
+<script>
+    document.getElementById('fullAppForm').onsubmit = function(e) {
         e.preventDefault();
-        alert('Payment and Application Successful! We will process your background check shortly.');
+        alert('Thank you! Your $150 payment has been processed and your application is being reviewed.');
         this.reset();
     };
 </script>
