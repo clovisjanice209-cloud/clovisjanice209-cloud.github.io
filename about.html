@@ -3,108 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Our Process | Hogar Dulce Rentals</title>
+    <title>About Us | Hogar Dulce Rentals</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        .about-hero {
-            background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.8)), 
-                        url('https://images.unsplash.com');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 100px 10%;
-            text-align: center;
-        }
-        .process-step {
-            border-left: 4px solid #00509d;
-            padding-left: 25px;
-            margin-bottom: 40px;
-            position: relative;
-        }
-        .process-step h3 { color: #003366; margin-bottom: 10px; }
-        .policy-box {
-            background: #f1f4f8;
-            padding: 40px;
-            border-radius: 10px;
-            font-size: 0.95rem;
-            line-height: 1.8;
-            color: #444;
-        }
-        .policy-box h2 { border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-bottom: 20px; }
-        .policy-list { list-style: disc; padding-left: 20px; }
-        .policy-list li { margin-bottom: 10px; }
+        .about-hero { background: #00203f; color: white; padding: 80px 10%; text-align: center; }
+        .process-box { border-left: 4px solid #00509d; padding-left: 20px; margin-bottom: 30px; }
+        .policy-section { background: #f1f4f8; padding: 40px; border-radius: 10px; margin-top: 50px; }
+        .policy-list li { margin-bottom: 15px; font-size: 0.95rem; color: #444; }
     </style>
 </head>
 <body>
+    <header>
+        <a href="index.html" class="logo">Hogar Dulce Rentals</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="payment.html" class="btn-apply-nav">Apply & Pay</a>
+        </nav>
+    </header>
 
-<header>
-    <a href="index.html" class="logo">Hogar Dulce Rentals</a>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <a href="payment.html" class="btn-apply-nav">Apply & Pay</a>
-    </nav>
-</header>
+    <section class="about-hero">
+        <h1>Our Transparent Process</h1>
+        <p>Leading the industry in secure and reliable property management.</p>
+    </section>
 
-<section class="about-hero">
-    <h1>The Hogar Dulce Standard</h1>
-    <p>Redefining Property Management across the United States through transparency and technology.</p>
-</section>
+    <section style="padding: 60px 10%;">
+        <div style="max-width: 900px; margin: 0 auto;">
+            <div class="process-box">
+                <h3>1. Application & Fee</h3>
+                <p>The $150 application fee initiates a national background check, credit analysis, and income verification. This is a non-refundable administrative cost for professional screening.</p>
+            </div>
+            <div class="process-box">
+                <h3>2. Digital Verification</h3>
+                <p>We use 256-bit encryption to verify your employment and rental history. Most applications are processed within 48 business hours.</p>
+            </div>
+            <div class="process-box">
+                <h3>3. Residency Agreement</h3>
+                <p>Approved residents receive a digital lease. Upon signing and security deposit payment, keys are delivered via our secure remote-access system.</p>
+            </div>
 
-<section>
-    <div style="max-width: 900px; margin: 0 auto;">
-        <h2 style="font-size: 2.2rem; text-align: center; margin-bottom: 50px;">How We Work: Our 4-Step Process</h2>
-        
-        <div class="process-step">
-            <h3>1. Property Curation & Inspection</h3>
-            <p>Every home in our national network undergoes a rigorous "Gold Standard" inspection. We only manage properties that meet strict safety, aesthetic, and functional requirements. If we wouldn't live there ourselves, we won't rent it to you.</p>
+            <div class="policy-section">
+                <h2 style="margin-bottom: 20px; color: #003366;">Terms & Residency Policies</h2>
+                <ul class="policy-list">
+                    <li><strong>Non-Refundable Fee:</strong> All applicants acknowledge that the $150.00 fee is for background processing and is non-refundable regardless of approval status.</li>
+                    <li><strong>Income Standard:</strong> Total household gross income must be at least 3x the monthly rent.</li>
+                    <li><strong>Occupancy:</strong> Only individuals listed on the approved application may reside in the property.</li>
+                    <li><strong>Maintenance:</strong> Residents are responsible for reporting all maintenance needs via the digital portal within 24 hours of discovery.</li>
+                </ul>
+            </div>
         </div>
+    </section>
 
-        <div class="process-step">
-            <h3>2. Professional Screening & Verification</h3>
-            <p>The $150 application fee covers a comprehensive national background check, credit history analysis, and income verification. This ensures that every Hogar Dulce community is comprised of reliable, verified residents.</p>
-        </div>
-
-        <div class="process-step">
-            <h3>3. Digital Leasing & Onboarding</h3>
-            <p>Once approved, your entire lease is managed through our secure cloud portal. No paper, no stress. You can review, sign, and store your documents digitally, and your keys are released via our secure remote-access lockbox system.</p>
-        </div>
-
-        <div class="process-step">
-            <h3>4. Lifetime Resident Support</h3>
-            <p>Managing a property doesn't end when you move in. Our 24/7 maintenance dispatch and dedicated state-level property managers are always a click away to ensure your home remains in peak condition.</p>
-        </div>
-    </div>
-</section>
-
-<section class="bg-light">
-    <div class="policy-box" style="max-width: 1000px; margin: 0 auto;">
-        <h2>Terms of Residency & Privacy Policy</h2>
-        <p>By applying for a Hogar Dulce Rentals property, all applicants agree to the following institutional terms:</p><br>
-        
-        <ul class="policy-list">
-            <li><strong>Application Fee:</strong> The $150.00 application fee is non-refundable and covers the cost of credit reporting, criminal background checks, and administrative processing.</li>
-            <li><strong>Income Requirements:</strong> Applicants must demonstrate a gross monthly income of at least 3x the monthly rent of the desired property.</li>
-            <li><strong>Privacy & Security:</strong> All sensitive data (SSNs, Bank Info, IDs) is encrypted using 256-bit SSL technology. We never sell your data to third parties.</li>
-            <li><strong>Occupancy Limits:</strong> Properties are restricted to the occupants listed on the application. Unauthorized long-term guests are a violation of the lease terms.</li>
-            <li><strong>Pet Policy:</strong> Individual property pet rules vary. All pets must be disclosed, and additional pet rent or deposits may apply based on breed and weight.</li>
-            <li><strong>Maintenance Responsibility:</strong> While we cover major structural and system repairs, residents are responsible for basic upkeep and reporting issues immediately to prevent property damage.</li>
-        </ul>
-        <br>
-        <p><em>Hogar Dulce Rentals is an Equal Housing Opportunity provider. We do not discriminate based on race, color, religion, sex, disability, familial status, or national origin.</em></p>
-    </div>
-</section>
-
-<footer>
-    <div style="text-align: center;">
-        <h3>Hogar Dulce Rentals</h3>
-        <p>Building Trust, One Home at a Time.</p><br>
-        <p>Corporate: support@hogardulce.com | (555) 123-4567</p>
-    </div>
-    <hr style="margin: 40px 0; border: 0; border-top: 1px solid rgba(255,255,255,0.1);">
-    <p style="text-align: center; font-size: 0.8rem;">&copy; 2024 Hogar Dulce Rentals. All Rights Reserved.</p>
-</footer>
-
+    <footer>
+        <p>&copy; 2024 Hogar Dulce Rentals. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
