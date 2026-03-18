@@ -6,66 +6,45 @@
     <title>Hogar Dulce Rentals | Excellence in National Property Management</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* High-End Visual Styling */
+        /* Modern UI Enhancements */
         .hero {
-            background: linear-gradient(rgba(0, 32, 63, 0.75), rgba(0, 32, 63, 0.75)), 
+            background: linear-gradient(rgba(0, 32, 63, 0.8), rgba(0, 32, 63, 0.8)), 
                         url('https://images.unsplash.com');
-            background-size: cover;
-            background-position: center;
             height: 80vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-align: center;
         }
-
         .stat-bar {
-            background: #00203f;
+            background: var(--primary-blue);
             color: white;
             display: flex;
             justify-content: space-around;
-            padding: 40px 10%;
+            padding: 30px 10%;
             text-align: center;
         }
+        .stat-item h2 { font-size: 2.5rem; margin-bottom: 5px; }
+        .stat-item p { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
 
         .feature-row {
             display: flex;
             align-items: center;
-            gap: 60px;
+            gap: 50px;
             padding: 80px 10%;
         }
-        .feature-row:nth-child(even) { flex-direction: row-reverse; background-color: #f8f9fa; }
+        .feature-row:nth-child(even) { flex-direction: row-reverse; background-color: var(--light-gray); }
         .feature-text { flex: 1; }
         .feature-image { flex: 1; }
-        
-        .feature-image img { 
-            width: 100%; 
-            height: 450px;
-            object-fit: cover;
-            border-radius: 20px; 
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15); 
-        }
+        .feature-image img { width: 100%; border-radius: 15px; shadow: 0 10px 30px rgba(0,0,0,0.1); }
 
-        .tagline { color: #00509d; font-weight: bold; text-transform: uppercase; margin-bottom: 10px; display: block; }
-        h2 { font-size: 2.8rem; color: #003366; margin-bottom: 20px; line-height: 1.1; }
+        .tagline { color: var(--accent-blue); font-weight: bold; text-transform: uppercase; display: block; margin-bottom: 10px; }
+        h2 { font-size: 2.5rem; color: var(--primary-blue); line-height: 1.2; margin-bottom: 20px; }
         
-        .cta-btn {
-            padding: 18px 45px;
-            font-size: 1.1rem;
-            background: #00509d;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: 0.3s;
+        .cta-footer {
+            background: var(--light-gray);
+            text-align: center;
+            padding: 80px 10%;
         }
-        .cta-btn:hover { background: #003366; transform: translateY(-3px); }
 
         @media (max-width: 768px) {
-            .feature-row { flex-direction: column !important; padding: 40px 5%; text-align: center; }
-            .feature-image img { height: 300px; }
+            .feature-row { flex-direction: column !important; text-align: center; padding: 40px 5%; }
             .stat-bar { flex-direction: column; gap: 30px; }
         }
     </style>
@@ -82,69 +61,91 @@
     </nav>
 </header>
 
-<!-- HERO: Luxury Exterior -->
+<!-- Hero Section -->
 <section class="hero">
-    <span style="letter-spacing: 3px; font-weight: 300;">PREMIUM REAL ESTATE MANAGEMENT</span>
-    <h1 style="font-size: 4rem; margin: 15px 0;">Find Your Perfect Home.</h1>
-    <p style="max-width: 700px; font-size: 1.2rem; opacity: 0.9;">Hogar Dulce Rentals connects qualified residents with high-end properties across the United States. Experience a stress-free rental journey today.</p>
-    <div style="margin-top:40px;">
-        <a href="payment.html"><button class="cta-btn">Start Application ($150)</button></a>
+    <span class="tagline" style="color: #fff; opacity: 0.8;">The Gold Standard in Leasing</span>
+    <h1>Premium Living, Professionally Managed.</h1>
+    <p style="max-width: 700px;">Hogar Dulce Rentals connects qualified residents with high-end properties across the United States. We simplify the rental journey with transparent technology and 24/7 localized support.</p>
+    <div style="margin-top:30px;">
+        <a href="payment.html"><button style="padding: 18px 40px; font-size: 1.1rem;">Start Application</button></a>
+        <a href="about.html"><button style="background:transparent; border: 2px solid white; margin-left:15px; padding: 18px 40px;">Learn Our Process</button></a>
     </div>
 </section>
 
+<!-- Trust Stat Bar -->
 <div class="stat-bar">
-    <div class="stat-item"><h2>5k+</h2><p>Homes Managed</p></div>
-    <div class="stat-item"><h2>50</h2><p>U.S. States</p></div>
-    <div class="stat-item"><h2>24h</h2><p>Maintenance Support</p></div>
+    <div class="stat-item"><h2>5k+</h2><p>Properties Managed</p></div>
+    <div class="stat-item"><h2>50</h2><p>U.S. States Covered</p></div>
+    <div class="stat-item"><h2>98%</h2><p>Tenant Satisfaction</p></div>
+    <div class="stat-item"><h2>24h</h2><p>Maintenance Response</p></div>
 </div>
 
-<!-- SECTION 1: Modern Interior -->
+<!-- Main Content Section 1 -->
 <section class="feature-row">
     <div class="feature-text">
-        <span class="tagline">Curated Listings</span>
-        <h2>Luxury Living for Modern Families</h2>
-        <p>Every home in our portfolio is hand-selected and rigorously inspected to meet the "Hogar Dulce" standard. From gourmet kitchens to master suites with a view, we provide spaces that do more than just house you—they inspire you.</p>
+        <span class="tagline">For Future Residents</span>
+        <h2>Find More Than Just a Rental—Find a Home.</h2>
+        <p>At Hogar Dulce Rentals, we believe your rental experience should be seamless. From luxury urban apartments to spacious suburban family homes, our portfolio is curated for quality. Every property undergoes a 50-point inspection before you ever receive the keys.</p>
         <br>
-        <p><strong>Apply with Confidence:</strong> Our $150 background check ensures you are moving into a community of high-quality, verified neighbors.</p>
-    </div>
-    <div class="feature-image">
-        <img src="https://images.unsplash.com" alt="Luxury Living Room">
-    </div>
-</section>
-
-<!-- SECTION 2: Professional Management -->
-<section class="feature-row">
-    <div class="feature-text">
-        <span class="tagline">Zero Stress Management</span>
-        <h2>We Handle the Details, You Enjoy Your Home.</h2>
-        <p>Forget the headaches of traditional renting. Our proprietary technology platform allows you to sign leases, pay rent, and request 24/7 maintenance support directly from your smartphone.</p>
-        <br>
-        <ul style="list-style: none; line-height: 2.2; color: #555;">
-            <li>✅ Dedicated Account Managers in every state.</li>
-            <li>✅ Real-time emergency maintenance dispatch.</li>
-            <li>✅ Professional landscape and property care.</li>
+        <ul style="list-style: none; line-height: 2;">
+            <li>🔹 **Secure Online Portals:** Pay rent and sign leases digitally.</li>
+            <li>🔹 **Priority Maintenance:** 24/7 emergency dispatch at your fingertips.</li>
+            <li>🔹 **Fair Housing Certified:** We treat every applicant with dignity and respect.</li>
         </ul>
     </div>
     <div class="feature-image">
-        <img src="https://images.unsplash.com" alt="Modern Architecture">
+        <img src="https://images.unsplash.com" alt="Modern Kitchen Interior">
     </div>
 </section>
 
-<!-- CALL TO ACTION -->
-<section style="text-align: center; padding: 100px 10%;">
-    <h2 style="margin-bottom: 10px;">Secure Your Dream Home Today</h2>
-    <p style="margin-bottom: 30px; color: #666;">Our application process is fast, professional, and completely digital.</p>
-    <a href="payment.html"><button class="cta-btn" style="padding: 20px 60px;">Apply & Pay $150 Now</button></a>
+<!-- Main Content Section 2 -->
+<section class="feature-row">
+    <div class="feature-text">
+        <span class="tagline">For Property Owners</span>
+        <h2>Maximize Your Investment with Zero Stress.</h2>
+        <p>Hogar Dulce Rentals takes the burden of property management off your shoulders. We handle the marketing, legal compliance, tenant screening, and rent collection, allowing you to enjoy the benefits of property ownership without the headache.</p>
+        <br>
+        <p><strong>Our Performance Guarantee:</strong> If we don't find a qualified tenant for your property within 21 days, the first month of management is on us. That is the Hogar Dulce promise.</p>
+    </div>
+    <div class="feature-image">
+        <img src="https://images.unsplash.com" alt="Professional Real Estate Handshake">
+    </div>
+</section>
+
+<!-- Why Choose Us Grid -->
+<section style="background-color: #fff;">
+    <h2 style="text-align:center;">The Hogar Dulce Advantage</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Rigorous Screening</h3>
+            <p>Our $150 background and credit screening ensures that our communities remain safe, quiet, and reliable for all residents.</p>
+        </div>
+        <div class="card">
+            <h3>Automated Efficiency</h3>
+            <p>Skip the paperwork. Our end-to-end digital platform allows you to apply, pay, and request repairs from your smartphone.</p>
+        </div>
+        <div class="card">
+            <h3>National Reach</h3>
+            <p>Whether you're moving from New York to California or Florida to Texas, our national network makes relocation effortless.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Final Call to Action -->
+<section class="cta-footer">
+    <h2>Ready to Secure Your New Home?</h2>
+    <p style="max-width: 600px; margin: 0 auto 30px;">Join thousands of satisfied tenants who have found their perfect living space with Hogar Dulce Rentals. Our $150 application process is fast, secure, and professional.</p>
+    <a href="payment.html"><button style="background: var(--accent-blue); padding: 20px 50px; font-size: 1.2rem;">Get Started Now</button></a>
 </section>
 
 <footer>
-    <div style="text-align: center;">
+    <div class="footer-content" style="text-align: center; display: block;">
         <h3>Hogar Dulce Rentals</h3>
-        <p>Redefining the Standard of American Rental Living.</p><br>
-        <p>support@hogardulce.com | (555) 123-4567</p>
+        <p>Redefining American Property Management.</p><br>
+        <p>Contact Support: support@hogardulce.com | (555) 123-4567</p>
     </div>
-    <hr style="margin: 40px 0; border: 0; border-top: 1px solid rgba(255,255,255,0.1);">
-    <p style="text-align: center; font-size: 0.8rem;">&copy; 2024 Hogar Dulce Rentals. Equal Housing Opportunity.</p>
+    <hr style="margin: 30px 0; border: 0; border-top: 1px solid rgba(255,255,255,0.1);">
+    <p>&copy; 2024 Hogar Dulce Rentals. All Rights Reserved. Equal Housing Opportunity.</p>
 </footer>
 
 </body>
