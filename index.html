@@ -3,8 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hogar Dulce Rentals | National Property Management</title>
+    <title>Hogar Dulce Rentals | Premium Property Management</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .feature-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px 8px 0 0;
+            margin-bottom: 15px;
+        }
+        .trust-section {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            padding: 60px 10%;
+            background: #fff;
+        }
+        .trust-content { flex: 1; }
+        .trust-image { flex: 1; }
+        .trust-image img { width: 100%; border-radius: 12px; box-shadow: 20px 20px 0 var(--primary-blue); }
+        
+        @media (max-width: 768px) {
+            .trust-section { flex-direction: column; text-align: center; }
+            .trust-image img { box-shadow: none; }
+        }
+    </style>
 </head>
 <body>
 
@@ -18,31 +42,51 @@
     </nav>
 </header>
 
-<main>
-    <section class="hero">
-        <h1>Find Your Perfect Home</h1>
-        <p>Expert property management for a stress-free rental experience.</p><br>
-        <a href="payment.html"><button>Apply for a Home</button></a>
-    </section>
+<section class="hero">
+    <h1>Your Journey Home Starts Here</h1>
+    <p>Managing over 5,000 premium rental properties across the United States with integrity and care.</p>
+    <div style="margin-top:20px;">
+        <a href="payment.html"><button>Browse Applications</button></a>
+        <a href="contact.html"><button style="background:transparent; border: 2px solid white; margin-left:10px;">Contact Office</button></a>
+    </div>
+</section>
 
-    <section>
-        <h2 style="text-align:center;">Premium Rental Services</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Vetted Properties</h3>
-                <p>All our homes undergo strict quality checks before listing.</p>
-            </div>
-            <div class="card">
-                <h3>National Reach</h3>
-                <p>Managing high-quality rentals in major cities across the USA.</p>
-            </div>
-            <div class="card">
-                <h3>Fast Approvals</h3>
-                <p>Our digital application process gets you answers in 48 hours.</p>
-            </div>
+<section class="trust-section">
+    <div class="trust-content">
+        <h2>Professional Management You Can Trust</h2>
+        <p>Hogar Dulce Rentals is more than a management company; we are your partners in housing. We specialize in single-family homes, luxury townhouses, and multi-unit complexes. Our mission is to provide high-quality, safe, and beautiful living spaces for families across the nation.</p>
+        <br>
+        <ul style="list-style: none;">
+            <li>✅ <strong>National Reach:</strong> Properties in all 50 states.</li>
+            <li>✅ <strong>Fast Turnaround:</strong> Applications processed within 48 hours.</li>
+            <li>✅ <strong>24/7 Support:</strong> On-call maintenance for every resident.</li>
+        </ul>
+    </div>
+    <div class="trust-image">
+        <img src="https://images.unsplash.com" alt="Modern Living Room">
+    </div>
+</section>
+
+<section class="bg-light">
+    <h2 style="text-align:center;">Our Core Services</h2>
+    <div class="grid">
+        <div class="card">
+            <img src="https://images.unsplash.com" class="feature-img">
+            <h3>Tenant Placement</h3>
+            <p>Our rigorous screening ensures that our communities remain safe, quiet, and friendly for all residents.</p>
         </div>
-    </section>
-</main>
+        <div class="card">
+            <img src="https://images.unsplash.com" class="feature-img">
+            <h3>Maintenance Elite</h3>
+            <p>Direct access to our portal for 24/7 repair requests, ensuring your home stays in peak condition.</p>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com" class="feature-img">
+            <h3>Financial Transparency</h3>
+            <p>Easy online rent payments, digital leases, and clear financial reporting for our tenants.</p>
+        </div>
+    </div>
+</section>
 
 <footer>
     <p>&copy; 2024 Hogar Dulce Rentals. All Rights Reserved.</p>
