@@ -1,1 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Hogar Dulce Rentals</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
+<header>
+    <a href="index.html" class="logo">Hogar Dulce Rentals</a>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="payment.html" class="btn-apply-nav">Apply & Pay</a>
+    </nav>
+</header>
+
+<section>
+    <h1 style="text-align:center;">Get In Touch</h1>
+    <div class="grid">
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="msg">How can we help?</label>
+                <textarea id="msg" rows="5" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+
+        <div class="card" style="text-align:left;">
+            <h3>Corporate Headquarters</h3>
+            <p>123 Rental Ave, Suite 400<br>Houston, TX 77001</p><br>
+            <p><strong>Support:</strong> support@hogardulce.com</p>
+            <p><strong>Main Line:</strong> (555) 123-4567</p>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.getElementById('contactForm').onsubmit = function(e) {
+        e.preventDefault();
+        alert('Message sent successfully! We will get back to you within 24 hours.');
+        this.reset();
+    };
+</script>
+
+</body>
+</html>
