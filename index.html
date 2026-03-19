@@ -117,7 +117,58 @@
             background: #b08d4a;
             transform: translateY(-3px);
             box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-        }
+        } 
+        .hero {
+    position: relative;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #002347; /* Backup color while images load */
+}
+
+.hero-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out; /* Smooth fade effect */
+}
+
+/* Dark overlay to make text pop */
+.slide::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 35, 71, 0.5); 
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    color: white;
+    padding: 0 5%;
+} 
 
         /* Trust Bar */
         .trust-bar {
@@ -315,57 +366,7 @@
         <p>Your dream home is just one application away. Experience a trusted, secure, and professional rental process across the United States.</p>
         <a href="payment.html" class="btn">Apply For A Home Now</a>
     </div>
-.hero {
-    position: relative;
-    height: 85vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    background-color: #002347; /* Backup color while images load */
-}
 
-.hero-slider {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-}
-
-.slide {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    opacity: 0;
-    transition: opacity 1.5s ease-in-out; /* Smooth fade effect */
-}
-
-/* Dark overlay to make text pop */
-.slide::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 35, 71, 0.5); 
-}
-
-.slide.active {
-    opacity: 1;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 10;
-    text-align: center;
-    color: white;
-    padding: 0 5%;
-} 
         <script>
     let heroIndex = 0;
     const allHeroSlides = document.querySelectorAll('.hero-slider .slide');
