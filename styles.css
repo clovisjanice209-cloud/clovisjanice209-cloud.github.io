@@ -118,3 +118,54 @@ footer {
     nav { margin-top: 20px; }
     nav a { margin: 0 10px; font-size: 0.85rem; }
 }
+/* --- MOBILE & TABLET ADAPTATION --- */
+
+@media (max-width: 768px) {
+    /* 1. Fix Navigation: Stacks the menu links so they don't overlap */
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 5%;
+    }
+    nav {
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column; /* Stacks links vertically */
+        width: 100%;
+    }
+    nav a {
+        margin: 5px 0;
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+    }
+
+    /* 2. Fix Grids: Makes side-by-side boxes (Realtors, Features) stack 1-on-top-of-another */
+    .grid, .grid-3, .realtor-container, .features-grid {
+        grid-template-columns: 1fr !important; 
+        padding: 10px 5% !important;
+    }
+
+    /* 3. Fix Hero Text: Shrinks large text so it doesn't spill off the screen */
+    .hero h1 {
+        font-size: 1.8rem !important;
+        line-height: 1.2;
+    }
+    .hero p {
+        font-size: 1rem !important;
+    }
+
+    /* 4. Fix Forms: Makes input boxes full width for easy finger-typing */
+    form, .form-container, .policy-box {
+        width: 95% !important;
+        padding: 15px !important;
+        margin: 10px auto !important;
+    }
+    input, select, textarea {
+        font-size: 16px !important; /* Prevents iPhones from zooming in automatically */
+    }
+
+    /* 5. Fix Sliders: Ensures images and testimonials fit the phone width */
+    .testimonial-card {
+        padding: 20px !important;
+    }
+}
