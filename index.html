@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hogar Dulce Rentals | Premium National Property Management</title>
+    <title>Hogar Dulce Rentals | Apply for Your Future Home</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com">
     <style>
         :root {
@@ -70,8 +70,8 @@
 
         /* Hero Section */
         .hero {
-            height: 80vh;
-            background: linear-gradient(rgba(0,35,71,0.7), rgba(0,35,71,0.7)), url('https://images.unsplash.com');
+            height: 85vh;
+            background: linear-gradient(rgba(0,35,71,0.75), rgba(0,35,71,0.75)), url('https://images.unsplash.com');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -91,88 +91,87 @@
         }
 
         .hero p {
-            font-size: 1.25rem;
-            margin-bottom: 30px;
-            max-width: 700px;
+            font-size: 1.4rem;
+            margin-bottom: 40px;
+            max-width: 750px;
             font-weight: 300;
         }
 
         .btn {
             display: inline-block;
-            padding: 15px 40px;
+            padding: 20px 50px;
             background: var(--accent);
             color: var(--white);
             text-decoration: none;
             border-radius: 4px;
             font-weight: 600;
+            font-size: 1.1rem;
             transition: var(--transition);
             border: none;
             cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .btn:hover {
             background: #b08d4a;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
         }
 
         /* Trust Bar */
         .trust-bar {
             background: var(--white);
-            padding: 40px 5%;
+            padding: 50px 5%;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
+            gap: 30px;
             text-align: center;
             box-shadow: 0 -10px 30px rgba(0,0,0,0.05);
         }
 
         .trust-item i {
-            font-size: 2rem;
+            font-size: 2.5rem;
             color: var(--accent);
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
         .trust-item h4 {
             color: var(--primary);
-            font-size: 1.1rem;
+            font-size: 1.2rem;
+            margin-bottom: 5px;
         }
 
-        /* Coverage Section */
+        /* Section Layouts */
         section {
-            padding: 80px 10%;
+            padding: 100px 10%;
         }
 
         .section-header {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 60px;
         }
 
         .section-header h2 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             color: var(--primary);
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
         }
 
         .card {
             background: var(--white);
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
             transition: var(--transition);
             text-align: center;
-            border-bottom: 4px solid transparent;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            border-bottom-color: var(--accent);
+            border-top: 5px solid var(--accent);
         }
 
         /* How It Works */
@@ -180,83 +179,78 @@
             background: var(--light-bg);
         }
 
-        .step {
-            position: relative;
-            padding: 20px;
-        }
-
         .step-num {
-            width: 40px;
-            height: 40px;
-            background: var(--accent);
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
             color: var(--white);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: bold;
-            margin: 0 auto 20px;
-        }
-
-        /* Property Cards */
-        .property-card {
-            background: var(--white);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .prop-img {
-            height: 200px;
-            background-color: #ddd;
-            background-size: cover;
-            background-position: center;
-        }
-
-        .prop-details {
-            padding: 20px;
-        }
-
-        .prop-price {
-            color: var(--accent);
-            font-size: 1.25rem;
-            font-weight: 700;
-            margin-bottom: 5px;
+            font-size: 1.2rem;
+            margin: 0 auto 25px;
+            border: 3px solid var(--accent);
         }
 
         /* Testimonials */
         .testimonial-card {
             background: var(--white);
-            padding: 30px;
+            padding: 40px;
             font-style: italic;
-            border-radius: 8px;
-            border-left: 5px solid var(--accent);
+            border-radius: 12px;
+            position: relative;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .testimonial-card::before {
+            content: "\f10d";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            color: var(--accent);
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 15px;
+            opacity: 0.3;
         }
 
         .author {
-            margin-top: 15px;
+            margin-top: 20px;
             font-style: normal;
-            font-weight: bold;
+            font-weight: 700;
             color: var(--primary);
+            display: block;
+        }
+
+        /* Call to Action Bottom */
+        .cta-bottom {
+            background: linear-gradient(rgba(0,35,71,0.9), rgba(0,35,71,0.9)), url('https://images.unsplash.com');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 120px 5%;
         }
 
         /* Footer */
         footer {
-            background: var(--primary);
+            background: #00152b;
             color: var(--white);
-            padding: 60px 10% 20px;
+            padding: 80px 10% 30px;
         }
 
         .footer-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            margin-bottom: 50px;
         }
 
         .footer-col h3 {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             color: var(--accent);
+            font-size: 1.4rem;
         }
 
         .footer-col ul {
@@ -264,33 +258,33 @@
         }
 
         .footer-col ul li {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
         .footer-col a {
-            color: #ccc;
+            color: #bdc3c7;
             text-decoration: none;
             transition: var(--transition);
         }
 
         .footer-col a:hover {
-            color: var(--white);
+            color: var(--accent);
         }
 
         .copyright {
             text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid #ffffff22;
+            padding-top: 30px;
+            border-top: 1px solid #ffffff11;
             font-size: 0.9rem;
-            color: #ccc;
+            color: #7f8c8d;
         }
 
-        /* Mobile Adjustments */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.2rem; }
-            header { flex-direction: column; padding: 20px; }
-            nav { margin-top: 15px; }
-            nav a { margin: 0 10px; font-size: 0.9rem; }
+            .hero h1 { font-size: 2.5rem; }
+            .hero p { font-size: 1.1rem; }
+            header { flex-direction: column; padding: 25px; }
+            nav { margin-top: 20px; }
+            nav a { margin: 0 15px; }
         }
     </style>
 </head>
@@ -302,189 +296,167 @@
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
-            <a href="payment.html" class="nav-btn">Apply Now</a>
+            <a href="payment.html" class="nav-btn">Apply For A Home</a>
         </nav>
     </header>
 
     <section class="hero">
         <h1>Find Your Perfect Home with Hogar Dulce Rentals</h1>
-        <p>Trusted rental solutions across the United States with a simple and secure application process.</p>
-        <a href="payment.html" class="btn">Browse Rentals</a>
+        <p>Your dream home is just one application away. Experience a trusted, secure, and professional rental process across the United States.</p>
+        <a href="payment.html" class="btn">Apply For A Home Now</a>
     </section>
 
     <div class="trust-bar">
         <div class="trust-item">
-            <i class="fas fa-check-circle"></i>
-            <h4>Verified Listings</h4>
+            <i class="fas fa-file-signature"></i>
+            <h4>Simple Application</h4>
+            <p>User-friendly digital forms</p>
         </div>
         <div class="trust-item">
-            <i class="fas fa-user-tie"></i>
-            <h4>Professional Realtors</h4>
+            <i class="fas fa-user-shield"></i>
+            <h4>Professional Support</h4>
+            <p>Expert realtors in every region</p>
         </div>
         <div class="trust-item">
-            <i class="fas fa-shield-alt"></i>
-            <h4>Secure Application</h4>
+            <i class="fas fa-lock"></i>
+            <h4>Secure & Encrypted</h4>
+            <p>Your data is always protected</p>
+        </div>
+        <div class="trust-item">
+            <i class="fas fa-bolt"></i>
+            <h4>Fast Approvals</h4>
+            <p>Rapid response times</p>
         </div>
     </div>
 
-    <section id="locations">
+    <section id="how-it-works" class="how-it-works">
         <div class="section-header">
-            <h2>Nationwide Coverage</h2>
-            <p>Our dedicated regional experts are ready to assist you.</p>
+            <h2>The Path to Your Dream Home</h2>
+            <p>We've simplified the rental process to get you into your new home faster.</p>
+        </div>
+        <div class="grid">
+            <div class="card step">
+                <div class="step-num">1</div>
+                <h3>Start Application</h3>
+                <p>Begin your journey by submitting your comprehensive digital application.</p>
+            </div>
+            <div class="card step">
+                <div class="step-num">2</div>
+                <h3>Secure Payment</h3>
+                <p>Pay your non-refundable $150 application fee through our secure gateway.</p>
+            </div>
+            <div class="card step">
+                <div class="step-num">3</div>
+                <h3>Agent Review</h3>
+                <p>One of our professional regional experts will review your details immediately.</p>
+            </div>
+            <div class="card step">
+                <div class="step-num">4</div>
+                <h3>Final Tour & Move-In</h3>
+                <p>Schedule your private house tour and finalize your move-in date.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="regions">
+        <div class="section-header">
+            <h2>Expert Guidance Nationwide</h2>
+            <p>Our dedicated realtors focus on securing the best homes for our applicants.</p>
         </div>
         <div class="grid">
             <div class="card">
+                <i class="fas fa-mountain" style="font-size: 2rem; color: var(--accent); margin-bottom: 15px;"></i>
                 <h3>California & West</h3>
-                <p style="color: var(--accent); margin: 10px 0;">Luis Garcia</p>
-                <p>Modern coastal living and western estates.</p>
+                <p style="font-weight: bold; color: var(--primary);">Luis Garcia</p>
+                <p>Specializing in modern western estates and coastal living.</p>
             </div>
             <div class="card">
+                <i class="fas fa-sun" style="font-size: 2rem; color: var(--accent); margin-bottom: 15px;"></i>
                 <h3>Atlanta & South</h3>
-                <p style="color: var(--accent); margin: 10px 0;">Diego Alvarez</p>
-                <p>Comfortable southern charms and urban lofts.</p>
+                <p style="font-weight: bold; color: var(--primary);">Diego Alvarez</p>
+                <p>Securing high-quality housing across the southern regions.</p>
             </div>
             <div class="card">
                 <h3>New York & North</h3>
-                <p style="color: var(--accent); margin: 10px 0;">Juan Martinez</p>
-                <p>Sophisticated city living and northern retreats.</p>
+                <i class="fas fa-city" style="font-size: 2rem; color: var(--accent); margin-bottom: 15px;"></i>
+                <p style="font-weight: bold; color: var(--primary);">Juan Martinez</p>
+                <p>Expertise in northern markets and competitive city homes.</p>
             </div>
             <div class="card">
+                <i class="fas fa-tree" style="font-size: 2rem; color: var(--accent); margin-bottom: 15px;"></i>
                 <h3>Ohio & East</h3>
-                <p style="color: var(--accent); margin: 10px 0;">Antonio Cruz</p>
-                <p>Family-focused communities and eastern classic homes.</p>
+                <p style="font-weight: bold; color: var(--primary);">Antonio Cruz</p>
+                <p>Dedicated to assisting families in finding eastern gems.</p>
             </div>
         </div>
     </section>
 
     <section class="how-it-works">
         <div class="section-header">
-            <h2>How It Works</h2>
-            <p>Your journey home in four simple steps.</p>
-        </div>
-        <div class="grid">
-            <div class="step">
-                <div class="step-num">1</div>
-                <h3>Browse Homes</h3>
-                <p>Explore our wide selection of verified listings across the country.</p>
-            </div>
-            <div class="step">
-                <div class="step-num">2</div>
-                <h3>Submit Application</h3>
-                <p>Fill out our comprehensive digital rental form in minutes.</p>
-            </div>
-            <div class="step">
-                <div class="step-num">3</div>
-                <h3>Secure Payment</h3>
-                <p>Pay your application fee safely through our encrypted gateway.</p>
-            </div>
-            <div class="step">
-                <div class="step-num">4</div>
-                <h3>Schedule Tour</h3>
-                <p>Meet your realtor for a private showing of your chosen property.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="featured">
-        <div class="section-header">
-            <h2>Featured Properties</h2>
-            <p>Explore our most popular current listings.</p>
-        </div>
-        <div class="grid">
-            <div class="property-card">
-                <div class="prop-img" style="background-image: url('https://images.unsplash.com');"></div>
-                <div class="prop-details">
-                    <p class="prop-price">$2,450 / mo</p>
-                    <h4>Modern Villa, California</h4>
-                    <p>3 Bed | 2 Bath | 1,800 sqft</p>
-                    <button class="btn" style="width: 100%; margin-top: 15px; padding: 10px;">View Details</button>
-                </div>
-            </div>
-            <div class="property-card">
-                <div class="prop-img" style="background-image: url('https://images.unsplash.com');"></div>
-                <div class="prop-details">
-                    <p class="prop-price">$1,850 / mo</p>
-                    <h4>Urban Loft, Atlanta</h4>
-                    <p>1 Bed | 1 Bath | 950 sqft</p>
-                    <button class="btn" style="width: 100%; margin-top: 15px; padding: 10px;">View Details</button>
-                </div>
-            </div>
-            <div class="property-card">
-                <div class="prop-img" style="background-image: url('https://images.unsplash.com');"></div>
-                <div class="prop-details">
-                    <p class="prop-price">$3,200 / mo</p>
-                    <h4>Classic Townhouse, NY</h4>
-                    <p>4 Bed | 3 Bath | 2,200 sqft</p>
-                    <button class="btn" style="width: 100%; margin-top: 15px; padding: 10px;">View Details</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="how-it-works">
-        <div class="section-header">
-            <h2>Why Choose Us</h2>
+            <h2>Why Choose Hogar Dulce Rentals?</h2>
         </div>
         <div class="grid">
             <div class="card">
-                <i class="fas fa-globe-americas" style="font-size: 2rem; color: var(--accent); margin-bottom: 15px;"></i>
-                <h3>Nationwide</h3>
-                <p>Consistent service standards from coast to coast.</p>
+                <i class="fas fa-check-double" style="font-size: 2rem; color: var(--accent); margin-bottom: 15px;"></i>
+                <h3>Total Transparency</h3>
+                <p>No hidden fees or surprises. Clear communication throughout your application.</p>
             </div>
             <div class="card">
-                <h3>Fast Approvals</h3>
-                <p>Our streamlined process means you get answers quickly.</p>
+                <i class="fas fa-clock" style="font-size: 2rem; color: var(--accent); margin-bottom: 15px;"></i>
+                <h3>48-Hour Response</h3>
+                <p>Our team works around the clock to ensure fast approval for all applicants.</p>
             </div>
             <div class="card">
-                <h3>Transparent Fees</h3>
-                <p>No hidden costs. Clear, upfront pricing on every listing.</p>
+                <i class="fas fa-hand-holding-heart" style="font-size: 2rem; color: var(--accent); margin-bottom: 15px;"></i>
+                <h3>Customer Focused</h3>
+                <p>We don't just rent houses; we help you find the space where your life happens.</p>
             </div>
         </div>
     </section>
 
     <section id="testimonials">
         <div class="section-header">
-            <h2>What Our Clients Say</h2>
+            <h2>Success Stories</h2>
         </div>
         <div class="grid">
             <div class="testimonial-card">
-                <p>"Hogar Dulce made moving across states so easy. Antonio Cruz was professional and helped us find exactly what we needed."</p>
-                <p class="author">- Sarah Jenkins, Ohio</p>
+                <p>"The application process was so straightforward. I applied on a Monday and had a tour scheduled by Wednesday. Antonio Cruz made it happen!"</p>
+                <span class="author">— Sarah J., Ohio Resident</span>
             </div>
             <div class="testimonial-card">
-                <p>"The application process was incredibly smooth and secure. I felt safe handling my payment through their portal."</p>
-                <p class="author">- Michael Ross, California</p>
+                <p>"I was worried about moving to a new state, but Luis Garcia guided me through the entire application process. Highly professional team."</p>
+                <span class="author">— Michael T., California Resident</span>
             </div>
         </div>
     </section>
 
-    <section style="text-align: center; background: var(--light-bg);">
-        <h2>Ready to Find Your Next Home?</h2>
-        <p style="margin-bottom: 30px; margin-top: 10px;">Join thousands of satisfied tenants nationwide.</p>
-        <a href="payment.html" class="btn">Start Your Application</a>
-    </section>
+    <div class="cta-bottom">
+        <h2>Ready to Secure Your Next Home?</h2>
+        <p style="margin: 20px 0 40px; font-size: 1.2rem;">Don't wait. Our properties move fast—start your application today.</p>
+        <a href="payment.html" class="btn">Apply For A Home</a>
+    </div>
 
     <footer>
         <div class="footer-grid">
             <div class="footer-col">
                 <h3>Hogar Dulce Rentals</h3>
-                <p>Your premier destination for professional rental management and trusted housing solutions.</p>
+                <p>Professional property management and trusted housing solutions across the United States. We make the path to your new home clear and secure.</p>
             </div>
             <div class="footer-col">
-                <h3>Quick Links</h3>
+                <h3>Navigation</h3>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                    <li><a href="payment.html">Apply & Pay</a></li>
+                    <li><a href="payment.html">Apply For A Home</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h3>Contact Info</h3>
+                <h3>Contact Details</h3>
                 <ul>
-                    <li>Email: support@hogardulce.com</li>
-                    <li>Phone: (555) 123-4567</li>
-                    <li>Location: National HQ, Houston, TX</li>
+                    <li><i class="fas fa-envelope"></i> support@hogardulce.com</li>
+                    <li><i class="fas fa-phone"></i> (555) 123-4567</li>
+                    <li><i class="fas fa-map-marker-alt"></i> National HQ, Houston, TX</li>
                 </ul>
             </div>
         </div>
