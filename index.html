@@ -528,6 +528,26 @@
             &copy; 2024 Hogar Dulce Rentals. All rights reserved. | Equal Housing Opportunity
         </div>
     </footer>
+<script>
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.testimonial-slide');
+    const wrapper = document.getElementById('testimonialWrapper');
+    const totalSlides = slides.length;
 
+    function showNextSlide() {
+        currentIndex++;
+        
+        // If we reach the end, reset back to the first slide
+        if (currentIndex >= totalSlides) {
+            currentIndex = 0;
+        }
+        
+        const offset = -currentIndex * 100;
+        wrapper.style.transform = `translateX(${offset}%)`;
+    }
+
+    // Change slide every 4 seconds (4000ms)
+    setInterval(showNextSlide, 4000);
+</script>
 </body>
 </html>
