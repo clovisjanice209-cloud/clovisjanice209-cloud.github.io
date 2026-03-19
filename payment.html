@@ -14,12 +14,21 @@
             background: #003366; color: white; padding: 12px 20px; margin: 30px 0 15px 0;
             border-radius: 5px; font-size: 1.1rem; text-transform: uppercase; font-weight: bold;
         }
-        .img-gallery { display: flex; gap: 10px; margin: 20px 0; justify-content: center; }
-        .img-gallery img { width: 30%; height: 180px; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-        .fee-header { background: #fff3cd; border: 2px solid #ffeeba; padding: 20px; border-radius: 8px; text-align: center; color: #856404; font-weight: bold; font-size: 1.2rem; margin-bottom: 20px; }
         .form-container { max-width: 1000px; margin: 0 auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.1); }
         .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; }
-        @media (max-width: 768px) { .grid-3 { grid-template-columns: 1fr; } .img-gallery img { width: 100%; } .img-gallery { flex-direction: column; } }
+        
+        /* Payment Method Styles */
+        .payment-methods { display: flex; gap: 20px; margin-top: 20px; flex-wrap: wrap; }
+        .method-card {
+            flex: 1; min-width: 250px; border: 2px solid #ddd; padding: 20px; border-radius: 10px; text-align: center;
+            transition: 0.3s; cursor: pointer;
+        }
+        .method-card:hover { border-color: #28a745; background: #f8fff9; }
+        .method-card img { height: 40px; margin-bottom: 10px; }
+        .method-card h4 { color: #333; margin-bottom: 5px; }
+        .method-card p { font-weight: bold; color: #28a745; font-size: 1.2rem; }
+
+        @media (max-width: 768px) { .grid-3 { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -41,90 +50,43 @@
 
 <section class="bg-light">
     <div class="form-container">
-        <div class="fee-header">NON-REFUNDABLE APPLICATION FEE: $150.00 USD</div>
-
-        <div class="img-gallery">
-            <img src="https://images.unsplash.com" alt="Luxury Home">
-            <img src="https://images.unsplash.com" alt="Modern Interior">
-            <img src="https://images.unsplash.com" alt="House Exterior">
-        </div>
-
         <form id="masterAppForm">
             
-            <!-- NEW SECTION: RENTAL APPLICATION DETAILS -->
             <div class="section-title">Rental Application Details</div>
             <div class="grid-3">
-                <div class="form-group">
-                    <label for="fullName">Full Name</label>
-                    <input type="text" id="fullName" name="fullName" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" required>
-                </div>
-                <div class="form-group">
-                    <label for="houseType">Type of House</label>
-                    <select id="houseType" name="houseType" required>
-                        <option value="">-- Select --</option>
-                        <option value="Apartment">Apartment</option>
-                        <option value="Condo">Condo</option>
-                        <option value="Townhouse">Townhouse</option>
-                        <option value="Single Family Home">Single Family Home</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="location">Preferred Location</label>
-                    <input type="text" id="location" name="location" required>
-                </div>
-                <div class="form-group">
-                    <label for="budget">Budget Range (Monthly)</label>
-                    <select id="budget" name="budget" required>
-                        <option value="">-- Select --</option>
-                        <option value="1000-2000">$1,000 - $2,000</option>
-                        <option value="2000-3500">$2,000 - $3,500</option>
-                        <option value="3500-5000">$3,500 - $5,000</option>
-                        <option value="5000+">$5,000+</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="moveDate">Move-in Date</label>
-                    <input type="date" id="moveDate" name="moveDate" required>
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="notes">Additional Notes</label>
-                <textarea id="notes" name="notes" rows="3" placeholder="Tell us more about your needs..."></textarea>
+                <div class="form-group"><label>Full Name</label><input type="text" name="fullName" required></div>
+                <div class="form-group"><label>Email Address</label><input type="email" name="email" required></div>
+                <div class="form-group"><label>Phone Number</label><input type="tel" name="phone" required></div>
             </div>
 
-            <!-- Existing Detailed Form Fields -->
-            <div class="section-title">Personal Information & ID</div>
-            <div class="grid-3">
-                <div class="form-group"><label>Date of Birth</label><input type="date" required></div>
-                <div class="form-group"><label>SSN / ITIN</label><input type="password" placeholder="XXX-XX-XXXX" required></div>
-                <div class="form-group"><label>Driver's License / ID #</label><input type="text" required></div>
+            <!-- PAYMENT SECTION -->
+            <div class="section-title" style="background:#28a745;">Application Fee Payment ($150.00)</div>
+            <p>Please send the <strong>$150.00 non-refundable fee</strong> using one of the methods below. Once paid, upload your receipt screenshot.</p>
+            
+            <div class="payment-methods">
+                <!-- CashApp -->
+                <div class="method-card">
+                    <img src="https://static.squarespace.com" alt="CashApp">
+                    <h4>CashApp Tag</h4>
+                    <p>$HogarDulceRentals</p>
+                </div>
+                
+                <!-- Apple Pay / Zelle Placeholder -->
+                <div class="method-card">
+                    <img src="https://upload.wikimedia.org" alt="Apple Pay">
+                    <h4>Apple Pay / Zelle</h4>
+                    <p>(555) 123-4567</p>
+                </div>
             </div>
 
-            <div class="section-title">Employment & Income</div>
-            <div class="grid-3">
-                <div class="form-group"><label>Current Employer</label><input type="text" required></div>
-                <div class="form-group"><label>Job Title</label><input type="text" required></div>
-                <div class="form-group"><label>Monthly Income ($)</label><input type="number" required></div>
-            </div>
-
-            <!-- Existing Payment Section -->
-            <div class="section-title" style="background:#28a745;">Secure Payment ($150.00)</div>
-            <div class="grid-3">
-                <div class="form-group"><label>Cardholder Name</label><input type="text" required></div>
-                <div class="form-group"><label>Card Number</label><input type="text" placeholder="0000 0000 0000 0000" required></div>
-                <div class="form-group"><label>Expiry / CVV</label><input type="text" placeholder="MM/YY - 000" required></div>
+            <div class="form-group" style="margin-top: 30px;">
+                <label><strong>Upload Payment Receipt (Screenshot)</strong></label>
+                <input type="file" name="receipt" accept="image/*" required>
+                <small>Applications will not be processed without a valid receipt.</small>
             </div>
 
             <button type="submit" style="width:100%; padding:20px; background:#28a745; font-size:1.3rem; margin-top:20px; color:white; border:none; border-radius:5px; cursor:pointer; font-weight:bold;">
-                SUBMIT APPLICATION & PAY $150
+                SUBMIT APPLICATION & RECEIPT
             </button>
         </form>
     </div>
@@ -137,7 +99,7 @@
 <script>
     document.getElementById('masterAppForm').onsubmit = function(e) {
         e.preventDefault();
-        alert('Thank you! Your application details have been received and your $150 payment has been processed.');
+        alert('Thank you! Your application and payment receipt have been submitted for verification. We will contact you within 48 hours.');
         this.reset();
     };
 </script>
