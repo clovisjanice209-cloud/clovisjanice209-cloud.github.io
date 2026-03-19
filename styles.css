@@ -117,76 +117,45 @@ footer {
     header { flex-direction: column; text-align: center; }
     nav { margin-top: 20px; }
     nav a { margin: 0 10px; font-size: 0.85rem; }
-/* --- ACCURATE MOBILE & TABLET OVERRIDE --- */
-
-@media screen and (max-width: 992px) {
-    /* 1. Force the Navigation to Stack Properly */
+/* --- THE ULTIMATE MOBILE OVERRIDE --- */
+@media only screen and (max-width: 768px) {
+    /* Force the header to stack and center everything */
     header {
-        display: block !important; /* Stops elements from sitting side-by-side */
-        text-align: center;
-        padding: 20px 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        height: auto !important;
+        padding: 20px 10px !important;
+        text-align: center !important;
     }
 
+    /* Force the navigation links into a single vertical column */
     nav {
         display: flex !important;
-        flex-direction: column !important; /* Vertical stack */
+        flex-direction: column !important;
         width: 100% !important;
-        margin-top: 20px;
-        gap: 0 !important;
+        margin-top: 15px !important;
+        gap: 10px !important;
     }
 
-    nav a {
+    /* Fix the "Apply & Pay" button specifically */
+    .btn-apply-nav, nav a {
         display: block !important;
+        width: 100% !important;
         padding: 15px !important;
-        margin: 0 !important;
-        border-bottom: 1px solid #f0f0f0;
-        font-size: 1.1rem;
-    }
-
-    /* 2. Fix the Apply & Pay Button (The "Funny" Look Fix) */
-    .btn-apply-nav, .nav-btn {
-        background: #003366 !important; /* Force your brand color */
-        color: white !important;
-        width: 90% !important; /* Makes it a big easy-to-tap bar */
-        margin: 15px auto !important;
+        margin: 5px 0 !important;
+        font-size: 18px !important;
         border-radius: 8px !important;
-        border: none !important;
-        font-weight: bold;
+        box-sizing: border-box !important;
     }
 
-    /* 3. Fix the Layout Grids (Realtors & Features) */
-    .grid, .grid-3, .realtor-container, .features-grid {
-        display: block !important; /* Disables the 3-column look */
-        padding: 10px 20px !important;
-    }
-
-    .card, .realtor-card, .feature-item {
-        width: 100% !important;
-        margin-bottom: 30px !important;
+    /* Fix any grids (realtors, features) so they don't sit side-by-side */
+    .grid, .grid-3, .realtor-container {
         display: block !important;
-    }
-
-    /* 4. Fix Hero Text and Images */
-    .hero {
-        height: auto !important;
-        padding: 80px 20px !important;
-    }
-    .hero h1 {
-        font-size: 1.8rem !important;
-        word-wrap: break-word;
-    }
-    .hero-slider, .slide {
-        height: 100% !important;
-    }
-
-    /* 5. Fix Forms (Payment Page) */
-    form, .form-container {
-        width: 95% !important;
-        margin: 0 auto !important;
-        padding: 15px !important;
-    }
-    .grid-3 input, .grid-3 select {
         width: 100% !important;
-        margin-bottom: 10px;
+    }
+    
+    .card, .realtor-card {
+        width: 100% !important;
+        margin-bottom: 20px !important;
     }
 }
