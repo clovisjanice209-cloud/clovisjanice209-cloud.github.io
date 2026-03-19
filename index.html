@@ -301,9 +301,84 @@
     </header>
 
     <section class="hero">
+        <div class="hero-slider">
+        <!-- CHANGE THE NAMES BELOW TO MATCH YOUR UPLOADED GITHUB IMAGES -->
+        <div class="slide active" style="background-image: url('image1.jpg');"></div>
+        <div class="slide" style="background-image: url('image2.jpg');"></div>
+        <div class="slide" style="background-image: url('image3.jpg');"></div>
+        <div class="slide" style="background-image: url('image4.jpg');"></div>
+    </div>
+
+    <!-- Text Content (Stays on top of the images) -->
+    <div class="hero-content">
         <h1>Find Your Perfect Home with Hogar Dulce Rentals</h1>
         <p>Your dream home is just one application away. Experience a trusted, secure, and professional rental process across the United States.</p>
         <a href="payment.html" class="btn">Apply For A Home Now</a>
+    </div>
+.hero {
+    position: relative;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #002347; /* Backup color while images load */
+}
+
+.hero-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out; /* Smooth fade effect */
+}
+
+/* Dark overlay to make text pop */
+.slide::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 35, 71, 0.5); 
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    color: white;
+    padding: 0 5%;
+} 
+        <script>
+    let heroIndex = 0;
+    const allHeroSlides = document.querySelectorAll('.hero-slider .slide');
+
+    function cycleHero() {
+        allHeroSlides[heroIndex].classList.remove('active');
+        heroIndex = (heroIndex + 1) % allHeroSlides.length;
+        allHeroSlides[heroIndex].classList.add('active');
+    }
+
+    // Changes picture every 5000ms (5 seconds)
+    setInterval(cycleHero, 5000);
+</script>
     </section>
 
     <div class="trust-bar">
