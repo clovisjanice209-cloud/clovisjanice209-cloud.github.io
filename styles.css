@@ -118,7 +118,8 @@ footer {
     nav { margin-top: 20px; }
     nav a { margin: 0 10px; font-size: 0.85rem; }
 /* --- THE ULTIMATE MOBILE OVERRIDE --- */
-@media only screen and (max-width: 768px) {
+
+    @media only screen and (max-width: 768px) {
     /* Force the header to stack and center everything */
     header {
         display: flex !important;
