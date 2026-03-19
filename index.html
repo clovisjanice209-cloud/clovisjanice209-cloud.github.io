@@ -415,19 +415,83 @@
     </section>
 
     <section id="testimonials">
-        <div class="section-header">
-            <h2>Success Stories</h2>
+       <style>
+    .testimonial-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        overflow: hidden; /* Hides the cards that aren't active */
+        position: relative;
+        padding: 40px 0;
+    }
+
+    .testimonial-wrapper {
+        display: flex;
+        transition: transform 0.5s ease-in-out; /* Makes the sliding smooth */
+    }
+
+    .testimonial-slide {
+        min-width: 100%; /* Each slide takes full width */
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .testimonial-card {
+        background: var(--white);
+        padding: 50px;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        border-left: 6px solid var(--accent);
+        text-align: center;
+    }
+
+    .testimonial-card p {
+        font-size: 1.2rem;
+        font-style: italic;
+        color: #555;
+    }
+
+    .author {
+        display: block;
+        margin-top: 20px;
+        font-weight: bold;
+        color: var(--primary);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+</style>
+
+<section id="testimonials">
+    <div class="section-header">
+        <h2>Success Stories</h2>
+        <p>Join over 10,000+ satisfied residents nationwide.</p>
+    </div>
+
+    <div class="testimonial-container">
+        <div class="testimonial-wrapper" id="testimonialWrapper">
+            <!-- 20 SUCCESS STORIES -->
+            <div class="testimonial-slide"><div class="testimonial-card"><p>"The fastest approval I've ever had. Luis Garcia is a pro!"</p><span class="author">— Robert H., California</span></div></div>
+            <div class="testimonial-slide"><div class="testimonial-card"><p>"Secure and easy. I love my new home in Atlanta!"</p><span class="author">— Sarah L., Georgia</span></div></div>
+            <div class="testimonial-slide"><div class="testimonial-card"><p>"They made moving to New York stress-free. Highly recommend."</p><span class="author">— James W., New York</span></div></div>
+            <div class="testimonial-slide"><div class="testimonial-card"><p>"Clean homes and great service in Ohio. 5 stars!"</p><span class="author">— Maria G., Ohio</span></div></div>
+            <div class="testimonial-slide"><div class="testimonial-card"><p>"The $150 fee was worth the peace of mind. Excellent team."</p><span class="author">— David K., Texas</span></div></div>
+            <div class="testimonial-slide"><div class="testimonial-card"><p>"Professional realtors who actually care about your needs."</p><span class="author">— Linda P., Florida</span></div></div>
+            <div class="testimonial-slide"><div class="testimonial-card"><p>"I found my dream townhouse in record time. Thank you!"</p><span class="author">— Kevin M., Washington</span></div></div>
+            <div class="testimonial-slide"><div class="testimonial-card"><p>"Hogar Dulce is the gold standard of property management."</p><span class="author">— Rachel B., Arizona</span></div></div>
+            <div class="testimonial-slide"><div class="testimonial-card"><p>"Smooth application process. Everything was handled digitally."</p><span class="author">— Steven T., Nevada</span></div></div>
+            <div class="testimonial-slide"><div class="testimonial-card"><p>"Finally a company that communicates clearly. Great job!"</p><span class="author">— Anthony R., Illinois</span></div></div>
+            <div class="testimonial-slide"><div class="testimonial-card"><p>"Diego Alvarez helped me find a perfect spot in the South."</p><span class="author">— Michelle O., Alabama</span></div></div>
+            <div class="testimonial-slide"><div class="testimonial-card"><p>"Top-tier properties and even better customer service."</p><span class="author">— Brian S., Colorado</span></div></div>
+            <div class="testimonial-slide"><div class="testimonial-card"><p>"I recommend this to all my family and friends moving East."</p><span class="author">— Jessica V., Pennsylvania</span></div></div>
+            <div class="testimonial-slide"><div class="testimonial-card"><p>"Safe, secure, and fast. The best rental experience yet."</p><span class="author">— Chris J., Oregon</span></div></div>
+            <div class="testimonial-slide"><div class="testimonial-card"><p>"Juan Martinez is the best in the North. Got me a great deal."</p><span class="author">— Emily D., Massachusetts</span></div></div>
+            <div class="testimonial-slide"><div class="testimonial-card"><p>"Beautiful homes and transparent fees. No surprises."</p><span class="author">— Marcus L., Tennessee</span></div></div>
+            <div class="testimonial-slide"><div class="testimonial-card"><p>"The verification process made me feel safe about my neighbors."</p><span class="author">— Tiffany C., Virginia</span></div></div>
+            <div class="testimonial-slide"><div class="testimonial-card"><p>"I love the Apple Pay option. So convenient!"</p><span class="author">— Jason B., Michigan</span></div></div>
+            <div class="testimonial-slide"><div class="testimonial-card"><p>"National expertise with a local feel. 10/10 service."</p><span class="author">— Megan W., Utah</span></div></div>
+            <div class="testimonial-slide"><div class="testimonial-card"><p>"I'll never use another management company again. Perfect."</p><span class="author">— Daniel F., North Carolina</span></div></div>
         </div>
-        <div class="grid">
-            <div class="testimonial-card">
-                <p>"The application process was so straightforward. I applied on a Monday and had a tour scheduled by Wednesday. Antonio Cruz made it happen!"</p>
-                <span class="author">— Sarah J., Ohio Resident</span>
-            </div>
-            <div class="testimonial-card">
-                <p>"I was worried about moving to a new state, but Luis Garcia guided me through the entire application process. Highly professional team."</p>
-                <span class="author">— Michael T., California Resident</span>
-            </div>
-        </div>
+    </div>
+</section>
     </section>
 
     <div class="cta-bottom">
